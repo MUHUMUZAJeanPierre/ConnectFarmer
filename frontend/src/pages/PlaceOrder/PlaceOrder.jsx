@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './PlaceOrder.css';
+import { useNavigate } from 'react-router-dom';
 
 const PlaceOrder = () => {
   const { getTotalCartAmount, token, cartItems, food_list } = useContext(StoreContext);
@@ -16,6 +17,7 @@ const PlaceOrder = () => {
   const [state, setState] = useState('');
   const [country, setCountry] = useState('');
   const [phone, setPhone] = useState('');
+  const navigate = useNavigate()
 
   const placeOrder = async (event) => {
     event.preventDefault();
@@ -51,6 +53,9 @@ const PlaceOrder = () => {
       });
       if (response.data.success) {
         toast.success("Order placed successfully!");
+        // navigate('/verify')
+        // const {session_url} = response.data
+        // window.location.replace(session_url);
         // Additional logic after successful order placement (e.g., redirect or show success message)
       } else {
         toast.error("Error placing order: " + response.data.message);
@@ -59,6 +64,16 @@ const PlaceOrder = () => {
       toast.error("Error placing order: " + error.message);
     }
   };
+  
+
+  useEffect(()=>{
+    if(!token){
+      navigate('/cart')
+    }
+    else if(getTotalCartAmount() ===0){
+      navigate('/cart')
+    }
+  }, [token])
 
   return (
     <form className='place-order'>

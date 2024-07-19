@@ -131,9 +131,13 @@ const StoreContextProvider = (props) => {
 
     useEffect(() => {
         handleFetch();
+        if(localStorage.getItem("token")){
+            setToken(localStorage.getItem("token"));
+        }
         if (token) {
             loadCartData();
         }
+        
     }, [token]);
 
     const contextValue = {
