@@ -49,7 +49,7 @@ const Contact = () => {
                     <button onClick={handleContact} type="submit" className="submit-button">Submit</button>
                 </form>
                 <p className="contact-info">
-                    For any question contact our 24/7 call center: <span className="contact-number">+250 784 127871</span>
+                    For any question contact our 24/7 call center: <span className="contact-number">+250 783 028 109</span>
                 </p>
             </div>
         </div>

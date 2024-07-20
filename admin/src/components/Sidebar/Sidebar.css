@@ -10,23 +10,29 @@
     /* background-color: blue; */
     padding-top: 50px ;
     padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 }
 .sidebar-option{
     display: flex;
     align-items: center;
     gap: 12px;
-    border: 1px solid #a9a9a9;
+    border: 3px solid #a9a9a9;
     padding: 8px 10px;
     border-right: 3px 0px 0px 3px;
     cursor: pointer;
+    height: 80px;
+    border-radius: 10px;
     /* background-color: green; */
 }
 .sidebar-option.active{
     background-color: rgb(198, 219, 198);
     border-color: green;
+    color: green;
+    font-weight: 600;
 }
 @media (max-width: 900px) {
     .sidebar-option p{

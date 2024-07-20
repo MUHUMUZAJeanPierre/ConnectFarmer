@@ -1,11 +1,23 @@
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
     background: url('../../assets/101.webp') no-repeat;
     background-size: contain;
     position: relative;
 }
-.header-contents{
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+}
+
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -15,17 +27,21 @@
     bottom: 10%;
     left: 6vw;
     animation: fadeIn 3s;
+    /* opacity: 1; */
+    z-index: 1; /* Ensure this is above the ::before element */
 }
-.header-contents h2{
+
+.header-contents h2 {
     font-weight: 500 !important;
     color: white;
     font-size: max(4.5vw, 22px) !important;
 }
-.header-contents p{
+
+.header-contents p {
     color: white;
     font-size: 1vw;
-
 }
+
 .header-contents button {
     border: none;
     color: green;
@@ -44,20 +60,19 @@
 }
 
 @media (max-width: 1050px) {
-    
-    .header-contents{
+    .header-contents {
         max-width: 45%;
     }
 }
 
 @media (max-width: 750px) {
-    .header-contents{
+    .header-contents {
         max-width: 65%;
     }
-    .header-contents p{
+    .header-contents p {
         display: none;
     }
-    .header-contents button{
+    .header-contents button {
         padding: 2vw 4vw;
     }
 }
