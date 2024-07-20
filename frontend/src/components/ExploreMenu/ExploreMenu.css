@@ -21,18 +21,24 @@
 }
 .explore-menu-list{
     display: flex;
+    justify-content: center;
     flex-direction: space-between;
     align-items: center;
+    gap: 10px;
     gap: 30px;
     text-align: center;
     overflow: scroll;
+    /* background: red; */
 }
 .explore-menu-list::-webkit-scrollbar{
     display: none;
 }
 .explore-menu-list-item img{
-    width: 7.5vw;
-    min-width: 80px;
+    /* width: 7.5vw; */
+    /* min-width: 80px; */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     cursor: pointer;
     border-radius: 50%;
     transition: 0.2s;

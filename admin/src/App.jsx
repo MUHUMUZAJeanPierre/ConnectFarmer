@@ -9,6 +9,7 @@ import Add from "./pages/Add/Add";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Contact from "./pages/Contact/Contact";
+import Users from "./pages/Users/Users";
 
 const App = () => {
   const url = "http://localhost:4000";
@@ -24,6 +25,7 @@ const App = () => {
               <Route path="/orders" element={<Orders url={url} />} />
               <Route path="/add" element={<Add url={url} />} />
               <Route path="/contact" element={<Contact url={url} />} />
+              <Route path="/users" element={<Users url={url} />} />
           </Routes>
       </div>
     </div>

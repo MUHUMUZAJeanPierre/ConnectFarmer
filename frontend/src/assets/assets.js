@@ -75,6 +75,9 @@ import order_icon from './order_icon.png'
 import profile_image from './profile_image.png'
 import upload_area from './upload_area.png'
 // import parcel_icon from './parcel_icon.png'
+import fruits from './fruits.jpeg';
+import grains from './grains.jpeg';
+import vegetables from './vegetables.jpeg'
 
 
 export const assets = {
@@ -115,37 +118,38 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
-        menu_image: menu_1
+        menu_name: "Vegetables",
+        menu_image: vegetables  
     },
     {
-        menu_name: "Rolls",
-        menu_image: menu_2
+        menu_name: "Fruits",
+        menu_image: fruits
     },
     {
-        menu_name: "Deserts",
-        menu_image: menu_3
+        menu_name: "Grains",
+        menu_image: grains
     },
-    {
-        menu_name: "Sandwich",
-        menu_image: menu_4
-    },
-    {
-        menu_name: "Cake",
-        menu_image: menu_5
-    },
-    {
-        menu_name: "Pure Veg",
-        menu_image: menu_6
-    },
-    {
-        menu_name: "Pasta",
-        menu_image: menu_7
-    },
-    {
-        menu_name: "Noodles",
-        menu_image: menu_8
-    }]
+    // {
+    //     menu_name: "Legumes",
+    //     menu_image: menu_4
+    // },
+    // {
+    //     menu_name: "Cake",
+    //     menu_image: menu_5
+    // },
+    // {
+    //     menu_name: "Pure Veg",
+    //     menu_image: menu_6
+    // },
+    // {
+    //     menu_name: "Pasta",
+    //     menu_image: menu_7
+    // },
+    // {
+    //     menu_name: "Noodles",
+    //     menu_image: menu_8
+    // }
+]
 
 export const food_list = [
     {

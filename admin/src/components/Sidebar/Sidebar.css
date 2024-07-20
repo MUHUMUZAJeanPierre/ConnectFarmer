@@ -1,7 +1,7 @@
 .sidebar{
     width: 18%;
     min-height: 100vh;
-    /* background-color: red; */
+    background-color: rgb(57, 118, 57);
     border: 1.5px solid #a9a9a9;
     border-top: 0;
     font-size: max(1vw, 10px);
@@ -28,12 +28,20 @@
     border-radius: 10px;
     /* background-color: green; */
 }
+.sidebar-option img{
+    width: 34px;
+    height: 34px;
+    object-fit:cover;
+    border-radius: 50%;
+    background-color: white;
+}
 .sidebar-option.active{
     background-color: rgb(198, 219, 198);
     border-color: green;
     color: green;
     font-weight: 600;
 }
+
 @media (max-width: 900px) {
     .sidebar-option p{
         display: none;

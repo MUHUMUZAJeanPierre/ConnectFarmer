@@ -69,4 +69,28 @@ export const login = async(req, res, next) => {
     }
 }
 
+//get all users
+
+export const getAllUsers = async(req, res) => {
+    try {
+        const users = await userModel.find();
+        res.status(200).json({success: true, data: users, message: 'users retrieved successfully'});
+    } catch (error) {
+        res.status(500).json({message: 'Failed to retrieve users', error, success:false});
+    }
+}
+
+export const deleteUser = async(req,res)=>{
+    const {id} = req.params
+    try {
+        const user = await userModel.findByIdAndDelete(id);
+        if(!user){
+            return res.status(404).json({message: 'User not found', success: false});
+        }
+        res.status(200).json({success: true, message: 'User deleted successfully', data: user});
+    } catch (error) {
+        res.status(500).json({error: error, message: 'Failed to delete user', success: false});
+    }
+}
+
 
